@@ -1,5 +1,5 @@
 # NLP_BigCamp_in_SNU
-The 7th data sience boot camp BIG CAMP with big data institute of Seoul National University
+The 7th data sience boot camp BIG CAMP with big data institute of Seoul National University <br/>
 from Oct. 22. 2019 to Oct. 25. 2019 in Gaepo Digital Innovation Centre
 
 # Day 1

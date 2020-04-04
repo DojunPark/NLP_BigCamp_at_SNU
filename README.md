@@ -16,7 +16,7 @@ Initially, grammar-based-> statistical-based-> artificial neural network based->
 The fields of natural language processing include voice assistant (Siri), chatbot (Q & A), and summary machine. <br/>
 
 Computers don't understand our speech, so we have to make it understandable. <br/>
--Delivered in a computer-readable representation <br/>
+- Delivered in a computer-readable representation <br/>
 Must understand how human language is made <br/>
 -Speech (acoustic transmission)-> Phoneme analysis-> Syntax analysis-> Semantic analysis-> Context inference <br/>
 
@@ -54,8 +54,8 @@ Do everything one by one and connect them all <br/>
 Dividing everything into smaller ones and then integrating them into the pipeline <br/>
 
 ### Useful natural language processing modules
--spaCy
--textacy
+- spaCy
+- textacy
 
 ### Extract semantics using classification model
 Most problems in natural language processing are classification problems. <br/>
@@ -168,7 +168,7 @@ Originally from machine translation <br/>
 For input French and output English, query in English and key and value in French <br/>
 
 ### positional encoding
--To put the positive information <br/>
+- To put the positive information <br/>
 
 Values ​​other than yourself are prevented from being attracted. <br/>
 If wrong, the weight is adjusted <br/>
@@ -189,116 +189,116 @@ BERT is a pre-trained model <br/>
 There are many other pre-learning models since BERT <br/>
 
 Many innovative models of NLP appeared in 2018 last year. <br/>
--ELMo, BERT, GPT, ULM-FiT… <br/>
--Changed the paradigm of sequential model in BERT <br/>
--Pre-training can be used everywhere, and all other tasks are performed with fine-tuning. <br/>
+- ELMo, BERT, GPT, ULM-FiT… <br/>
+- Changed the paradigm of sequential model in BERT <br/>
+- Pre-training can be used everywhere, and all other tasks are performed with fine-tuning. <br/>
 (Part that was predicted to be difficult in the past) <br/>
--1. Trained model that teaches supervised through semi-supervised learning <br/>
+1. Trained model that teaches supervised through semi-supervised learning <br/>
 2. Perform specific tasks through supervised learning <br/>
--Meaning extract is not easy <br/>
+- Meaning extract is not easy <br/>
 Semantic extraction from text is a classification task (positive, negative, neutral) <br/>
--Most of the tasks of NLP are classified <br/>
--BERT performance surpasses other models in most tasks <br/>
+- Most of the tasks of NLP are classified <br/>
+- BERT performance surpasses other models in most tasks <br/>
 
 ### Sentence Classification
--Pre-learning by receiving input-> fine-tuning <br/>
+- Pre-learning by receiving input-> fine-tuning <br/>
 
 There are BERT base and BERT large <br/>
--Base is the same size as GPT
--BERT is a learned transformer encoder stack
--BERT is made only with Transformer encoder (no translation task is required, so no decoder is required)
--BERT base has 12 encoders and large has 24
+- Base is the same size as GPT
+- BERT is a learned transformer encoder stack
+- BERT is made only with Transformer encoder (no translation task is required, so no decoder is required)
+- BERT base has 12 encoders and large has 24
 -Hidden layer increased to 768 and 1024, multi-head attention increased to 12 and 16
--[CLS] token is added at the beginning of the sentence
+- [CLS] token is added at the beginning of the sentence
 -> To extract or classify word-specific features
--If you know how to use BERT, you can easily perform all tasks
+- If you know how to use BERT, you can easily perform all tasks
 
 ### Features of BERT
--Only Transformer Encoder is used
--Perform feature extraction and classification tasks with BERT's pre-learning model
--In the case of RNN and CNN, you had to learn it yourself, but since BERT is already pre-trained, you can perform tasks only by fine-tuning.
--Transformer is not used unless you create your own translator
+- Only Transformer Encoder is used
+- Perform feature extraction and classification tasks with BERT's pre-learning model
+- In the case of RNN and CNN, you had to learn it yourself, but since BERT is already pre-trained, you can perform tasks only by fine-tuning.
+- Transformer is not used unless you create your own translator
 
 ### Embedding
--Previously, one-hot encoding
--One-hot encoding cannot understand the semantic relationship between words
--Grasping the meaning of words through surrounding words is word embedding
+- Previously, one-hot encoding
+- One-hot encoding cannot understand the semantic relationship between words
+- Grasping the meaning of words through surrounding words is word embedding
 Word to vector-> word2vec
--Word embedding contributes greatly to text processing
--Learning method is learning in relation to surrounding words
--Expressed as 100-dimensional vector, 10000-dimensional vector, etc.
+- Word embedding contributes greatly to text processing
+- Learning method is learning in relation to surrounding words
+- Expressed as 100-dimensional vector, 10000-dimensional vector, etc.
 The larger the dimension of the vector, the finer the meaning can be expressed.
 
 ### ELMo
--Solve the problem of synonyms
--The existing word embedding could not solve the problem of synonyms.
--Learning the context of words to learn different vector values ​​for each word
--Coming in 2018
--Good performance by guessing context with 3 layers
--Predict words to come later with language modeling
--Write LSTM layer, learn in both forward and backward directions and concat the two layers
--Multiply each layer by its weight
--Embedding only when you put a sentence
--Even with the same stick, it has a different vector value (because it was learned with different sentences)
--Extraction of a vector of a specific word from the embedding value (feature extraction)
--In case of ELMo, if the layer goes up, it learns the context vector of the word well.
+- Solve the problem of synonyms
+- The existing word embedding could not solve the problem of synonyms.
+- Learning the context of words to learn different vector values ​​for each word
+- Coming in 2018
+- Good performance by guessing context with 3 layers
+- Predict words to come later with language modeling
+- Write LSTM layer, learn in both forward and backward directions and concat the two layers
+- Multiply each layer by its weight
+- Embedding only when you put a sentence
+- Even with the same stick, it has a different vector value (because it was learned with different sentences)
+- Extraction of a vector of a specific word from the embedding value (feature extraction)
+- In case of ELMo, if the layer goes up, it learns the context vector of the word well.
 
 ULM-FiT also pre-learns <br/>
 Transformer <br/>
 OpenAI Transformer <br/>
--Learning with only the decoder before BERT comes out <br/>
--Reference value x <br/> because no encoder is inserted
+- Learning with only the decoder before BERT comes out <br/>
+- Reference value x <br/> because no encoder is inserted
 
 ### BERT
--Refer to the transformer's encoder value
--The bidirectionality of ELMo concatenated two directions
--BERT learns bidirectional at one point at the same time (available by masking)
--Learning value is contained in [CLS]
--15% chance to replace [mask] with other words or existing words
--Improves performance by learning these words as words before and after
--By learning this, you can learn in both directions
--[SEP] token is put at the end of the first and second sentences
--1. Train the [mask] value
--2. Train whether the first sentence and the second sentence are consecutive sentences
--BERT embedding can understand the meaning of words with different meanings depending on the context like ELMo
--Is the learning value of the last layer the best?
+- Refer to the transformer's encoder value
+- The bidirectionality of ELMo concatenated two directions
+- BERT learns bidirectional at one point at the same time (available by masking)
+- Learning value is contained in [CLS]
+- 15% chance to replace [mask] with other words or existing words
+- Improves performance by learning these words as words before and after
+- By learning this, you can learn in both directions
+- [SEP] token is put at the end of the first and second sentences
+- 1. Train the [mask] value
+- 2. Train whether the first sentence and the second sentence are consecutive sentences
+- BERT embedding can understand the meaning of words with different meanings depending on the context like ELMo
+- Is the learning value of the last layer the best?
 Since each layer has a different learning value, the sum of all layers has the best learning value
 In other tasks, the sum of the second to last layers is the best learning value.
--Feature-extraction is also possible.
--Object name recognition
+- Feature-extraction is also possible.
+- Object name recognition
 
 ### BERT FEATURES
--Wordpiece
--Tokenizing to remove unknown tokens
--Performance depends on how you cut the wordpiece
--3 tokens are combined to get the value
+- Wordpiece
+- Tokenizing to remove unknown tokens
+- Performance depends on how you cut the wordpiece
+- 3 tokens are combined to get the value
 
 ### Fine-tuning
--Proceed with a real pre-training model
--cls is binary classification
--When classifying by multi-class, softmax is applied to the last hidden layer to be multi-class.
--Shows the best performance for all tasks
+- Proceed with a real pre-training model
+- cls is binary classification
+- When classifying by multi-class, softmax is applied to the last hidden layer to be multi-class.
+- Shows the best performance for all tasks
 
 ### XLNet
--Autoregressive LM?
+- Autoregressive LM?
 Predict with two words before or after
 Predict word in context word (GPT…)
 Great performance for typical NLP tasks
 However, the characteristic of not being able to learn simultaneously
--Burt is an autoencoder
+- Bert is an autoencoder
 Predict the word [mask] from before and after
 The disadvantage of Burt is pre-learning with a random [mask].
 For example, in the case of a baking crisis, two words are dependent but masked independently.
--So use permutation
+- So use permutation
 If there is a certain position, permute each other, and the number of possible cases will be as many as the total number of tokens.
 Learning with tokens of t-1 of t
--Great idea
+- Great idea
 This is the case for Korean language surveys
 However, since all cases need to be calculated as factorial, the calculation amount is very high
 
 ### ETRI's Korbert
--Morphological analyzer
--Classifier and feature-extraction can be used according to purpose
+- Morphological analyzer
+- Classifier and feature-extraction can be used according to purpose
 SKT's KoBERT <br/>
 Seoul National University is also making it-in a different way (but difficult ;;;) <br/>
 

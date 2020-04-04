@@ -314,6 +314,4 @@ The basic idea of Word2vec is skip-gram (prediction of surrounding words as a ce
 
 Word2vec is a token unit <br/>
 Fasttext is divided into subword units <br/>
-using a lot of glove in most English <br/>
-
-Brings pre-trained word embeddings <br/>
+GloVe is well used in English <br/>

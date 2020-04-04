@@ -307,8 +307,6 @@ Take the pretrained weight of the hugging face and do the crash
 
 ## Day 5
 
-If you do morphological analysis, <br/>
-I should have eaten ... Analysis of meaningless relationship between morphemes becomes <br/>
 Korean has other issues related to embedding <br/>
 The basic idea of Word2vec is skip-gram (prediction of surrounding words as a central word) / cbow <br/>
 
